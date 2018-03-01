@@ -29,7 +29,7 @@ def search(img):
 
 def pull_screenshot():
     filename = datetime.datetime.now().strftime("%H%M%S") + '.png'
-    os.system('mv autojump.png {}'.format(filename))
+    os.system('move autojump.png {}'.format(filename))
     os.system('adb shell screencap -p /sdcard/autojump.png')
     os.system('adb pull /sdcard/autojump.png ./autojump.png')
 
